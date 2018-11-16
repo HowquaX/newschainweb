@@ -8,7 +8,7 @@ const publicPath = path.join(__dirname, 'dist')
 app.use('/static', express.static(publicPath));
 
 // send the user to index html page inspite of the url
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.resolve(path.join(__dirname, 'dist'), 'app.html'));
 });
 
